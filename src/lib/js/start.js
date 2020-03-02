@@ -5,12 +5,15 @@
     <div class="alis-row alisCloseIcon">
         X
     </div>
+    <div class="alis-row alisCounter" id="alisCounter">
+        0 / 0
+    </div>
     <div class="alis-img-container text-center">
         <img id="alisMainImg" src="src/assets/sampleImage.jpg" alt="sampleimage" draggable=false>
     </div>
     <div class="alis-buttons-container">
     <div class="alis-row" style="justify-content: center">
-    <h5 id="alisImageTitle" class="text-center" style="margin: 10px;">Name of the image.jpg</h5>
+    <span id="alisImageTitle" class="text-center">Name of the image.jpg</span>
     </div>
     <div class="buttons-div alis-row text-center">
         <span class="alis-nav-btn" id="alisRotateLeftBtn"></span>

@@ -1,126 +1,151 @@
 * {
-    box-sizing: border-box;
-    font-family: arial;
+  box-sizing: border-box;
+  font-family: arial;
+}
+
+:root {
+  --alis-main-bg-color: rgba(0, 0, 0, 0.6);
+  --alis-main-img-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.5);
+  --alis-title-color: rgb(228, 228, 228);
+  --alis-nav-buttons-bg-color: rgba(0, 0, 0, 0.5);
+  --alis-title-size: 20px;
 }
 
 .alis-row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .no-margin {
-    margin: 0px;
+  margin: 0px;
 }
 
 .no-padding {
-    padding: 0px;
+  padding: 0px;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .alisCloseIcon {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    color: white;
-    background: rgba(0, 0, 0, 0.4);
-    align-items: center;
-    justify-content: center;
-    border-bottom-left-radius: 40px;
-    padding: 0 0 10px 10px;
-    z-index: 1000000000;
-    cursor: pointer;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 40px;
+  padding: 0 0 10px 10px;
+  z-index: 1000000000;
+  cursor: pointer;
+}
+
+.alisCounter {
+  position: fixed;
+  bottom: 0px;
+  right: 10px;
+  color: var(--alis-title-color);
+  font-size: var(--alis-title-size);
 }
 
 .alis-main-container {
-    display: none;
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    background: rgba(0, 0, 0, 0.6);
-    top: 0;
-    left: 0;
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: var(--alis-main-bg-color);
+  top: 0;
+  left: 0;
 }
-
 
 .alis-img-container {
-    width: 100vw;
-    height: 90vh;
-    padding: 20px 0 0 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
+  width: 100vw;
+  height: 90vh;
+  padding: 20px 0 0 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.alis-img-container>img {
-    max-width: 90%;
-    max-height: 90%;
-    transition: transform .2s;
-    transition-timing-function: ease-out;
-    position: absolute;
-    cursor: move;
-    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.5);
+.alis-img-container img {
+  max-height: 90%;
+  max-width: 90%;
+  transition: transform 0.2s;
+  transition-timing-function: ease;
+  position: absolute;
+  cursor: move;
+  box-shadow: var(--alis-main-img-shadow);
 }
 
 .alis-buttons-container {
-    width: 100vw;
-    height: 10vh;
+  width: 100vw;
+  height: 10vh;
 }
 
-.alis-buttons-container h5 {
-    z-index: 256789000;
-    color: rgb(228, 228, 228);
+.alis-buttons-container span {
+  z-index: 256789000;
+  color: var(--alis-title-color);
+  margin: 10px;
+  font-size: var(--alis-title-size);
 }
 
-.buttons-div {
-    justify-content: center;
-    /* background: rgba(255, 10, 173, 0.2); */
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
+.alis-buttons-container .buttons-div {
+  justify-content: center;
+  /* background: rgba(255, 10, 173, 0.2); */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
 }
 
-.alis-nav-btn {
-    width: 30px;
-    height: 30px;
-    margin: 0 1px 0 1px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
+.alis-buttons-container .buttons-div .alis-nav-btn {
+  width: 30px;
+  height: 30px;
+  margin: 0 1px 0 1px;
+  border-radius: 50%;
+  background-color: var(--alis-nav-buttons-bg-color);
+  cursor: pointer;
 }
 
-#alisRotateLeftBtn {
-    background-image: url(../img/rotateLeft.svg)
+.alis-buttons-container .buttons-div .alis-nav-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
 }
 
-#alisRotateRightBtn {
-    background-image: url(../img/rotateRight.svg);
+.alis-buttons-container .buttons-div #alisRotateLeftBtn {
+  background-image: url(../img/rotateLeft.svg);
+
 }
 
-#alisPrevBtn {
-    background-image: url(../img/preview.svg)
+.alis-buttons-container .buttons-div #alisRotateRightBtn {
+  background-image: url(../img/rotateRight.svg);
 }
 
-#alisPlayBtn {
-    background-image: url(../img/play.svg);
+.alis-buttons-container .buttons-div #alisPrevBtn {
+  background-image: url(../img/preview.svg);
 }
 
-#alisNextBtn {
-    background-image: url(../img/next.svg);
+.alis-buttons-container .buttons-div #alisPlayBtn {
+  background-image: url(../img/play.svg);
 }
 
-#alisZoomInBtn {
-    background-image: url(../img/zoomIn.svg);
+.alis-buttons-container .buttons-div #alisNextBtn {
+  background-image: url(../img/next.svg);
 }
 
-#alisZoomOutBtn {
-    background-image: url(../img/zoomOut.svg);
+.alis-buttons-container .buttons-div #alisZoomInBtn {
+  background-image: url(../img/zoomIn.svg);
 }
+
+.alis-buttons-container .buttons-div #alisZoomOutBtn {
+  background-image: url(../img/zoomOut.svg);
+}
+
+/*# sourceMappingURL=alis-lightbox.css.map */

@@ -32,3 +32,7 @@ export var links = document.querySelectorAll('a[alis-lb]');
 
 //Image title tag
 export var alisImageTitle = document.getElementById("alisImageTitle");
+
+//Counter
+export var alisCounter = document.getElementById("alisCounter");
+console.log(alisCounter)

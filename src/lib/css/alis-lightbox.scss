@@ -3,6 +3,14 @@
     font-family: arial;
 }
 
+:root {
+    --alis-main-bg-color: rgba(0, 0, 0, 0.6);
+    --alis-main-img-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.5);
+    --alis-title-color: rgb(228, 228, 228);
+    --alis-nav-buttons-bg-color: rgba(0, 0, 0, 0.5);
+    --alis-title-size: 20px;
+}
+
 .alis-row {
     display: -ms-flexbox;
     display: flex;
@@ -38,12 +46,20 @@
     cursor: pointer;
 }
 
+.alisCounter {
+    position: fixed;
+    bottom: 0px;
+    right: 10px;
+    color: var(--alis-title-color);
+    font-size: var(--alis-title-size);
+}
+
 .alis-main-container {
     display: none;
     position: fixed;
     height: 100vh;
     width: 100vw;
-    background: rgba(0, 0, 0, 0.6);
+    background: var(--alis-main-bg-color);
     top: 0;
     left: 0;
 }
@@ -58,69 +74,78 @@
     flex-flow: column;
     align-items: center;
     justify-content: center;
-}
 
-.alis-img-container>img {
-    max-width: 90%;
-    max-height: 90%;
-    transition: transform .2s;
-    transition-timing-function: ease-out;
-    position: absolute;
-    cursor: move;
-    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.5);
+    img {
+        max-height: 90%;
+        max-width: 90%;
+        transition: transform .2s;
+        transition-timing-function: ease;
+        position: absolute;
+        cursor: move;
+        box-shadow: var(--alis-main-img-shadow);
+    }
 }
 
 .alis-buttons-container {
     width: 100vw;
     height: 10vh;
-}
 
-.alis-buttons-container h5 {
-    z-index: 256789000;
-    color: rgb(228, 228, 228);
-}
+    span {
+        //title
+        z-index: 256789000;
+        color: var(--alis-title-color);
+        margin: 10px;
+        font-size: var(--alis-title-size);
+    }
 
-.buttons-div {
-    justify-content: center;
-    /* background: rgba(255, 10, 173, 0.2); */
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-}
+    .buttons-div {
+        justify-content: center;
+        /* background: rgba(255, 10, 173, 0.2); */
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
 
-.alis-nav-btn {
-    width: 30px;
-    height: 30px;
-    margin: 0 1px 0 1px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
+        .alis-nav-btn {
+            //buttons
+            width: 30px;
+            height: 30px;
+            margin: 0 1px 0 1px;
+            border-radius: 50%;
+            background-color: var(--alis-nav-buttons-bg-color);
+            cursor: pointer;
+        }
 
-#alisRotateLeftBtn {
-    background-image: url(../img/rotateLeft.svg)
-}
+        .alis-nav-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
 
-#alisRotateRightBtn {
-    background-image: url(../img/rotateRight.svg);
-}
+        #alisRotateLeftBtn {
+            background-image: url(../img/rotateLeft.svg)
+        }
 
-#alisPrevBtn {
-    background-image: url(../img/preview.svg)
-}
+        #alisRotateRightBtn {
+            background-image: url(../img/rotateRight.svg);
+        }
 
-#alisPlayBtn {
-    background-image: url(../img/play.svg);
-}
+        #alisPrevBtn {
+            background-image: url(../img/preview.svg)
+        }
 
-#alisNextBtn {
-    background-image: url(../img/next.svg);
-}
+        #alisPlayBtn {
+            background-image: url(../img/play.svg);
+        }
 
-#alisZoomInBtn {
-    background-image: url(../img/zoomIn.svg);
-}
+        #alisNextBtn {
+            background-image: url(../img/next.svg);
+        }
 
-#alisZoomOutBtn {
-    background-image: url(../img/zoomOut.svg);
+        #alisZoomInBtn {
+            background-image: url(../img/zoomIn.svg);
+        }
+
+        #alisZoomOutBtn {
+            background-image: url(../img/zoomOut.svg);
+        }
+    }
 }
