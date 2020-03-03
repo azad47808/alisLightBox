@@ -43,8 +43,8 @@ function resetImageData() {
 }
 
 function resetClickes() {
-    alisMainImg.onmousemove = (e) => {}
-    document.body.onmousemove = (e) => {}
+    alisMainImg.onmousemove = () => {}
+    document.body.onmousemove = () => {}
 }
 
 export function open(elmt) {
