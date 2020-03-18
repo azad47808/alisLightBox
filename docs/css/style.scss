@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: yellowtail;
+    src: url(../assets/fonts/Yellowtail-Regular.ttf)
+}
+
+.lightShadow {
+    text-shadow: 1px 1px 1px white;
+}
+
+.darkShadow {
+    text-shadow: 1px 1px 1px black;
+}
+
+section,
+header {
+    padding: 50px 0px;
+}
+
+h1,
+h2,
+.code,
+p {
+    padding: 0px 70px;
+
+    @media screen and (max-width: 500px) {
+        padding: 20px;
+    }
+}
+
+.code {
+    text-shadow: none;
+    margin: 10px 100px;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    @media screen and (max-width: 500px) {
+        margin: 0px !important;
+    }
+}
+
+.section-subtitle {
+    // margin-left: 80px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+
+    @media screen and (max-width: 500px) {
+        margin-left: 0px;
+        text-align: center;
+    }
+}
+
+body {
+    // font-family: yellowtail;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#header {
+    display: flex;
+    // flex-flow: column;
+    padding: 80px;
+    align-items: center;
+    background-color: rgba(255, 62, 65, 1);
+    color: white;
+
+    @media screen and (max-width: 900px) {
+        img {
+            width: 300px;
+        }
+
+        & {
+            flex-flow: column;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        img {
+            width: 200px;
+        }
+
+        & {
+            padding: 20px;
+        }
+
+    }
+
+    p {
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+.section-title {
+    text-align: center;
+    font-size: 40px;
+}
+
+#example {
+    background-color: rgba(60, 55, 68, 1);
+    // padding-bottom: 70px;
+    color: white;
+}
+
+
+.imagesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a {
+        margin: 20px 20px 0 20px;
+    }
+
+    img {
+        width: 250px;
+        height: 250px;
+        // box-shadow: 0px 0px 5px 1px black;
+        border: 5px solid white;
+        transition: all .4s;
+
+        @media screen and (max-width: 500px) {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    img:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 15px black;
+    }
+
+}
+
+.ex2 {
+    background-color: rgba(132, 143, 165, 1) !important;
+}
+
+#doc {
+    background-color: rgba(224, 224, 224, 1);
+}

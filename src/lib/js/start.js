@@ -2,6 +2,7 @@
     var div = document.createElement('DIV');
     div.innerHTML = `
     <div id="alisMainContainer" class="alis-main-container">
+    <div id="alisLoader">Loading</div>
     <div class="alis-row alisCloseIcon">
         X
     </div>
@@ -9,7 +10,7 @@
         0 / 0
     </div>
     <div class="alis-img-container text-center">
-        <img id="alisMainImg" src="src/assets/sampleImage.jpg" alt="sampleimage" draggable=false>
+        <img id="alisMainImg" alt="sampleimage" draggable=false>
     </div>
     <div class="alis-buttons-container">
     <div class="alis-row" style="justify-content: center">

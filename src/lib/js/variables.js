@@ -17,13 +17,22 @@ export var alisZoomOutBtn = document.getElementById("alisZoomOutBtn")
 let galleriesArr = [];
 document.querySelectorAll('a[alis-lb]').forEach(element => {
     galleriesArr.push(element.getAttribute("alis-lb"))
+
 });
 
 new Set(galleriesArr).forEach(
     (gallery) => {
-        document.querySelectorAll(`a[alis-lb=${gallery}]`).forEach((elm, i) => {
-            elm.setAttribute("alisID", i);
-        })
+        try {
+            document.querySelectorAll(`a[alis-lb=${gallery}]`).forEach((elm, i) => {
+                elm.setAttribute("alisIndex", i);
+            })
+            // console.log('worked')
+        } catch (error) {
+            console.error("please don't use space in the 'alis-lb' attribute")
+            console.error(`<a alis-lb="${gallery}"></a>`)
+            console.warn("instead use underline or dash")
+            console.log("for examle <a alis-lb='my_gallery'></a>")
+        }
     }
 )
 
@@ -35,4 +44,6 @@ export var alisImageTitle = document.getElementById("alisImageTitle");
 
 //Counter
 export var alisCounter = document.getElementById("alisCounter");
-console.log(alisCounter)
+
+//Loading
+export var alisLoader = document.getElementById("alisLoader")

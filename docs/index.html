@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/alis-lightbox.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="mainContainer">
+        <header id="header" class="padding">
+            <img src="./assets/img/alisLightbox.png" alt="AlisLightBox">
+            <p class="darkShadow">JavaScript LightBox For Viewing Photos, Responsive and compatible
+                with touch devices: <strong>no Dependencies.</strong></p>
+        </header>
+        <section id="example" class="padding">
+            <h1 class="section-title">Example</h1>
+            <h2 class="section-subtitle">Hailee Steinfeld</h2>
+            <div class="imagesContainer">
+                <a href="./assets/img/hailee-steinfeld.jpg" alis-lb-title="Hailee Steinfeld in the metro"
+                    alis-lb="hailee-steinfeld">
+                    <img src="./assets/img/thumbnails/hailee-steinfeld.jpg" alt="hailee-steinfeld">
+                </a>
+                <a href="./assets/img/hailee-steinfeld 2.jpg" alis-lb-title="Hailee Steinfeld with sunglasses"
+                    alis-lb="hailee-steinfeld">
+                    <img src="./assets/img/thumbnails/hailee-steinfeld 2.jpg" alt="hailee-steinfeld">
+                </a>
+                <a href="./assets/img/hailee-steinfeld 3.jpg" alis-lb-title="Hailee Steinfeld in the car"
+                    alis-lb="hailee-steinfeld">
+                    <img src="./assets/img/thumbnails/hailee-steinfeld 3.jpg" alt="hailee-steinfeld">
+                </a>
+                <a href="./assets/img/hailee-steinfeld 4.jpg" alis-lb-title="Hailee Steinfeld with flower"
+                    alis-lb="hailee-steinfeld">
+                    <img src="./assets/img/thumbnails/hailee-steinfeld 4.jpg" alt="hailee-steinfeld">
+                </a>
+            </div>
+
+        </section>
+        <section id="example" class="lightShadow padding ex2">
+            <h1 class="section-title">Indevidual Images</h1>
+            <h2 class="section-subtitle">Celebrities</h2>
+            <div class="imagesContainer">
+                <a href="./assets/img/leonardo dicaprio.jpg" alis-lb-title="leonardo dicaprio"
+                    alis-lb="leonardodicaprio">
+                    <img src="./assets/img/thumbnails/leonardo dicaprio.jpg" alt="leonardo dicaprio">
+                </a>
+                <a href="./assets/img/natalie portman.jpg" alis-lb-title="natalieportman" alis-lb="natalieportman">
+                    <img src="./assets/img/thumbnails/natalie portman.jpg" alt="natalie portman">
+                </a>
+                <a href="./assets/img/scarlett johansson.jpg" alis-lb-title="scarlettjohansson"
+                    alis-lb="scarlettjohansson">
+                    <img src="./assets/img/thumbnails/scarlett johansson.jpg" alt="scarlett johansson">
+                </a>
+                <a href="./assets/img/Chloë Grace Moretz.jpg" alis-lb-title="ChloëGraceMoretz"
+                    alis-lb="ChloëGraceMoretz">
+                    <img src="./assets/img/thumbnails/Chloë Grace Moretz.jpg" alt="Chloë Grace Moretz">
+                </a>
+            </div>
+        </section>
+        <section id="doc" class="lightShadow padding">
+            <h1 class="section-title">Documentation</h1>
+            <h2 class="section-subtitle">Installation</h2>
+            <p>Import the alisLightBox.js and the alis-lightBox.css file in your project. you can find they in the dist
+                folder.</p>
+            <div class="code">
+                &lt;link rel="stylesheet" href="AlisLightBox.css"&gt;<br>
+                &lt;script src="AlisLightBox.js"&gt; &lt;script&gt;
+            </div>
+            <h2 class="section-subtitle">Use</h2>
+            <p>Make an "a" tag, its "href" attribute should be image url and add the "alis-lb" attribute in the "a" tag.
+            </p>
+            <div class="code">
+                &lt;a href="this is my image url.jpg" <span
+                    style="color: rgba(255, 62, 65, 1)">alis-lb="gallery_name"</span>&gt; click me to open image
+                &lt;/a&gt;
+            </div>
+            <p>You can add title, with the "alis-lb-title" attribute.</p>
+            <div class="code">
+                &lt;a href="this is my image url.jpg" alis-lb="gallery_name" <span
+                    style="color: rgba(255, 62, 65, 1)">alis-lb-title="this is image title"</span>&gt;
+                click me to open image &lt;/a&gt;
+            </div>
+            <h2 class="section-subtitle">Shortcut keys</h2>
+            <p><strong>Arrow right : </strong>Go to the next image</p>
+            <p><strong>Arrow left : </strong>Go to the preview image</p>
+            <p><strong>Arrow up : </strong>Zoom in</p>
+            <p><strong>Arrow down : </strong>Zoom out</p>
+        </section>
+    </div>
+    <script src="./js/alisLightBox.js"></script>
+</body>
+
+</html>

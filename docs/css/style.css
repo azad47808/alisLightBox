@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: yellowtail;
+  src: url(../assets/fonts/Yellowtail-Regular.ttf);
+}
+.lightShadow {
+  text-shadow: 1px 1px 1px white;
+}
+
+.darkShadow {
+  text-shadow: 1px 1px 1px black;
+}
+
+section,
+header {
+  padding: 50px 0px;
+}
+
+h1,
+h2,
+.code,
+p {
+  padding: 0px 70px;
+}
+@media screen and (max-width: 500px) {
+  h1,
+h2,
+.code,
+p {
+    padding: 20px;
+  }
+}
+
+.code {
+  text-shadow: none;
+  margin: 10px 100px;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+@media screen and (max-width: 500px) {
+  .code {
+    margin: 0px !important;
+  }
+}
+
+.section-subtitle {
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 500px) {
+  .section-subtitle {
+    margin-left: 0px;
+    text-align: center;
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#header {
+  display: flex;
+  padding: 80px;
+  align-items: center;
+  background-color: #ff3e41;
+  color: white;
+}
+@media screen and (max-width: 900px) {
+  #header img {
+    width: 300px;
+  }
+  #header {
+    flex-flow: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  #header img {
+    width: 200px;
+  }
+  #header {
+    padding: 20px;
+  }
+}
+#header p {
+  font-size: 30px;
+  text-align: center;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 40px;
+}
+
+#example {
+  background-color: #3c3744;
+  color: white;
+}
+
+.imagesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.imagesContainer a {
+  margin: 20px 20px 0 20px;
+}
+.imagesContainer img {
+  width: 250px;
+  height: 250px;
+  border: 5px solid white;
+  transition: all 0.4s;
+}
+@media screen and (max-width: 500px) {
+  .imagesContainer img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.imagesContainer img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px black;
+}
+
+.ex2 {
+  background-color: #848fa5 !important;
+}
+
+#doc {
+  background-color: #e0e0e0;
+}
+
+/*# sourceMappingURL=style.css.map */
