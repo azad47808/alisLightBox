@@ -61,8 +61,9 @@ p {
   position: fixed;
   right: 0;
   top: 0;
-  width: 200px;
+  width: 159px;
   height: 200px;
+  background-repeat: no-repeat;
   background-image: url(../assets/img/version.png);
 }
 
