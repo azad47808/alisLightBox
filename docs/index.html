@@ -10,11 +10,17 @@
 </head>
 
 <body>
+    <div id="beta">
+        <!-- version: 0.1 <Strong>BETA</Strong> -->
+    </div>
     <div id="mainContainer">
         <header id="header" class="padding">
             <img src="./assets/img/alisLightbox.png" alt="AlisLightBox">
-            <p class="darkShadow">JavaScript LightBox For Viewing Photos, Responsive and compatible
-                with touch devices: <strong>no Dependencies.</strong></p>
+            <div style="text-align: center;display: flex;flex-flow: column;align-items: center;">
+                <p class="darkShadow">JavaScript LightBox For Viewing Photos, Responsive and compatible
+                    with touch devices: <strong>no Dependencies.</strong></p>
+                <a href="" id="viewOnGithub"></a>
+            </div>
         </header>
         <section id="example" class="padding">
             <h1 class="section-title">Example</h1>
@@ -39,7 +45,7 @@
             </div>
 
         </section>
-        <section id="example" class="lightShadow padding ex2">
+        <section id="example" class="padding ex2">
             <h1 class="section-title">Indevidual Images</h1>
             <h2 class="section-subtitle">Celebrities</h2>
             <div class="imagesContainer">
@@ -83,6 +89,7 @@
                     style="color: rgba(255, 62, 65, 1)">alis-lb-title="this is image title"</span>&gt;
                 click me to open image &lt;/a&gt;
             </div>
+            <p><Strong>Note : </Strong> don't use space in the "alis-lb" attribute.</p>
             <h2 class="section-subtitle">Shortcut keys</h2>
             <p><strong>Arrow right : </strong>Go to the next image</p>
             <p><strong>Arrow left : </strong>Go to the preview image</p>
@@ -90,6 +97,9 @@
             <p><strong>Arrow down : </strong>Zoom out</p>
         </section>
     </div>
+    <footer style="text-align: center; padding: 30px;">Author: Ali-Mirzaiee-Azad. find me on <a
+            href="https://www.twitter.com/AliMirzaieeAzad" target="block">Twitter</a> <a
+            href="https://www.facebook.com/AliMirzaieeAzad" target="block">Facebook</a></footer>
     <script src="./js/alisLightBox.js"></script>
 </body>
 
