@@ -3,7 +3,8 @@ import {
 	alisMainImg,
 	alisImageTitle,
 	alisCounter,
-	alisLoader
+	alisLoader,
+	alisGalleryTitle
 } from "./variables.js";
 
 //Check is touch device or browser
@@ -27,7 +28,6 @@ function alisFadeIn(element) {
 	element.style.animation = "fadeIn";
 	element.style.animationDuration = "1s"
 	element.style.animationFillMode = "forwards";
-
 }
 
 function alisImageSetData() {
@@ -81,6 +81,10 @@ function alisMoveImage() {
 	alisMainImg.style.setProperty('--alisImgTop', top)
 }
 
+function nextPrevButtonDispaly(dispaly) {
+	document.body.style.setProperty("--aliNextPrevButtonDispaly", dispaly)
+}
+
 //Open Lightbox
 export function open(link) {
 	alisMainContainer.style.display = 'block'
@@ -89,10 +93,12 @@ export function open(link) {
 	path = link.getAttribute('href')
 	//Getting name of gallery
 	galleryName = link.getAttribute('alis-lb')
+	alisGalleryTitle.innerText = galleryName
 	//Getting index of clicked link. I add the alisIndex programicly in the variables.js file
 	Index = parseInt(link.getAttribute('alisIndex'))
 	//Getting Gallery length
 	galleryLength = document.querySelectorAll(`a[alis-lb=${galleryName}]`).length
+	galleryLength == 1 ? nextPrevButtonDispaly("none") : nextPrevButtonDispaly("block");
 	//Getting image title
 	title = link.getAttribute('alis-lb-title')
 	alisImageSetData()
@@ -115,6 +121,10 @@ export function close() {
 }
 
 export function next() {
+	if (galleryLength == 1) {
+		return
+	}
+
 	alisRemoveTransform()
 	alisFadeOut(alisMainImg)
 	alisFadeIn(alisLoader)
@@ -136,6 +146,10 @@ export function next() {
 	)
 }
 export function prev() {
+	if (galleryLength == 1) {
+		return
+	}
+
 	alisRemoveTransform()
 	alisFadeOut(alisMainImg)
 	alisFadeIn(alisLoader)
@@ -210,15 +224,15 @@ if (IS_TOUCH_DEVICE) {
 	alisMainImg.addEventListener("mousedown", (e) => {
 		var x = e.pageX - e.target.offsetLeft;
 		var y = e.pageY - e.target.offsetTop;
-		alisMainImg.onmousemove = (e) => {
+		alisMainContainer.onmousemove = (e) => {
 			let mouseLeft = parseInt(e.pageX);
 			let mouseTop = parseInt(e.pageY);
 			left = `${mouseLeft - x}px`;
 			top = `${mouseTop - y}px`;
 			alisMoveImage()
 		}
-		alisMainImg.addEventListener("mouseup", (e) => {
-			alisMainImg.onmousemove = () => {}
+		alisMainContainer.addEventListener("mouseup", (e) => {
+			alisMainContainer.onmousemove = () => {}
 		})
 	})
 }

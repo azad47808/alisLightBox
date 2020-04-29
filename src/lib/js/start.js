@@ -9,8 +9,11 @@
     <div class="alis-row alisCounter" id="alisCounter">
         0 / 0
     </div>
+    <div class="alis-row alisGalleryTitle" id="alisGalleryTitle">
+        gallery name
+    </div>
     <div class="alis-img-container text-center">
-        <img id="alisMainImg" alt="sampleimage" draggable=false>
+        <img id="alisMainImg" alt="sampleimage" draggable="false">
     </div>
     <div class="alis-buttons-container">
     <div class="alis-row" style="justify-content: center">

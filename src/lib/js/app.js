@@ -43,6 +43,7 @@ links.forEach((link) => [
 
 //Close lightbox by click on div
 alisMainContainer.addEventListener('click', (event) => {
+    console.log(event)
     if (event.target.tagName == 'DIV') {
         close();
     }

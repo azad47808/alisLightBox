@@ -47,3 +47,6 @@ export var alisCounter = document.getElementById("alisCounter");
 
 //Loading
 export var alisLoader = document.getElementById("alisLoader")
+
+//Gallery Name
+export var alisGalleryTitle = document.getElementById("alisGalleryTitle")
